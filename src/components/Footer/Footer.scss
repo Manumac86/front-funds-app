@@ -1,0 +1,21 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  &_button{
+    width: 160px;
+
+    .MuiButton-label {
+      color: gray;
+      font-family: 'Quicksand';
+      text-transform: initial;
+      font-size: 14px;
+
+      a {
+        color: gray;
+        text-decoration: none;
+      }
+    }
+  }
+}

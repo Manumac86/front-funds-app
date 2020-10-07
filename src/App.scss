@@ -1,0 +1,28 @@
+@import './assets/fonts.scss';
+
+body {
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.app {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Quicksand', sans-serif;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #222222;
+
+  &_content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 5rem 1rem;
+    width: 340px;
+
+    ul {
+      list-style: none;
+    }
+  }
+}

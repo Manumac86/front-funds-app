@@ -1,0 +1,80 @@
+.fundInput {
+  display: flex;
+  flex-direction: column;
+  justify-self: flex-end;
+  justify-content: space-between;
+  height: 130px;
+
+  &_form {
+    display: flex;
+    font-weight: 600;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 40px;
+
+    &_container {
+      display: flex;
+    }
+
+    &_label {
+      align-items: center;
+      border: 1px solid rgba(135, 135, 135, 0.7);
+      border-radius: 0;
+      border-right: none;
+      color: rgb(135, 135, 135);
+      display: flex;
+      font-size: 20px;
+      justify-content: center;
+      margin: 0;
+      padding: 5px;
+    }
+
+    &_input {
+      border: 1px solid rgba(135, 135, 135, 0.7);
+      border-left: none;
+      border-radius: 0;
+      color: rgb(135, 135, 135);
+      font-size: 20px;
+      font-family: 'Quicksand';
+      font-weight: 600;
+      margin: 0;
+      padding: 5px;
+      width: 110px;
+
+      &_email {
+        color: rgb(135, 135, 135);
+        font-family: 'Quicksand';
+        height: 30px;
+        margin: 10px 0;
+        padding-left: 10px;
+        width: 100%;
+      }
+    }
+
+    &_input:focus {
+      outline: none !important;
+    }
+
+    &_input::-webkit-outer-spin-button,
+    &_input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    Button {
+      background-color: rgb(2, 173, 2);
+      width: 140px;
+    }
+
+    Button:hover {
+      background-color: green;
+    }
+  }
+
+  &_link {
+    color: rgb(93, 175, 252);
+    font-style: italic;
+    padding: 5px 0;
+    text-decoration: none;
+  }
+}
