@@ -53,6 +53,11 @@ const FundInputContainer = ({
    * @type {string}
    */
   const [modalTitle, setModalTitle] = useState('');
+  /**
+   * The flag to validate the forms inputs.
+   * @type {Boolean}
+   */
+  const [isInputsInvalid, setIsInputsInvalid] = useState(false);
 
   /**
    * Adds a new fund. It receives the API Token getted when the app loads.
@@ -141,6 +146,16 @@ const FundInputContainer = ({
     event.preventDefault();
   };
 
+  /**
+   * Validates Inputs for mail and fund.
+   *
+   * @return {Boolean}
+   */
+  useEffect(() => {
+    const emailMask = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    setIsInputsInvalid(!(emailMask.test(newFundEmail) && newFund));
+  }, [newFundEmail]);
+
   return (
     <div className="fundInput_container">
       {loading ? <CircularProgress />
@@ -157,6 +172,7 @@ const FundInputContainer = ({
               onChange={handleChange}
               onChangeEmail={handleChangeEmail}
               onSubmit={handleSubmit}
+              isInputsInvalid={isInputsInvalid}
             />
           </>
         )}

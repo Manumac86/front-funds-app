@@ -41,6 +41,10 @@
       padding: 5px;
       width: 110px;
 
+      &:focus {
+        outline: none !important;
+      }
+
       &_email {
         color: rgb(135, 135, 135);
         font-family: 'Quicksand';
@@ -48,12 +52,14 @@
         margin: 10px 0;
         padding-left: 10px;
         width: 100%;
+
+        &.-error {
+          color: red !important;
+        }
       }
     }
 
-    &_input:focus {
-      outline: none !important;
-    }
+
 
     &_input::-webkit-outer-spin-button,
     &_input::-webkit-inner-spin-button {

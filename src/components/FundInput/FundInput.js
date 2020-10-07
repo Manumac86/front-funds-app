@@ -17,6 +17,7 @@ import './FundInput.scss';
  */
 const FundInput = ({
   fundValue,
+  isInputsInvalid,
   onChange,
   onChangeEmail,
   onSubmit,
@@ -27,7 +28,7 @@ const FundInput = ({
       onSubmit={onSubmit}
     >
       <input
-        className="fundInput_form_input_email"
+        className={`fundInput_form_input_email ${isInputsInvalid ? '-error' : ''}`}
         onChange={onChangeEmail}
         placeholder="Enter your email"
         type="text"
@@ -42,6 +43,7 @@ const FundInput = ({
         />
       </div>
       <Button
+        disabled={isInputsInvalid}
         type="submit"
         color="primary"
         variant="contained"
@@ -64,6 +66,7 @@ const FundInput = ({
  * FundInput Props Types.
  */
 FundInput.propTypes = {
+  isInputsInvalid: PropTypes.bool.isRequired,
   fundValue: PropTypes.number.isRequired,
   onChange: PropTypes.func.isRequired,
   onChangeEmail: PropTypes.func.isRequired,
