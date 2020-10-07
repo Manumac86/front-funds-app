@@ -1,8 +1,9 @@
 {
   "name": "front-funds-app",
   "version": "1.0.0",
-  "description": "",
+  "description": "The FrontEnd for Funds App",
   "main": "index.js",
+  "repository": "https://github.com/Manumac86/front-funds-app",
   "scripts": {
     "build": "webpack --mode production",
     "lint": "eslint --ext .jsx,.js src",
