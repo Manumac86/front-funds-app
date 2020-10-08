@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Button from '@material-ui/core/Button';
+import Text from '../Text/Text';
 
 // Styles
 import './Footer.scss';
@@ -17,7 +18,7 @@ const Footer = ({ onSaveClick }) => (
       onClick={onSaveClick}
       variant="contained"
     >
-      Save for later
+      <Text tid="saveButton" />
     </Button>
     <Button
       className="footer_button"
@@ -29,7 +30,7 @@ const Footer = ({ onSaveClick }) => (
         href="https://twitter.com/intent/tweet"
         className="twitter-share-button"
       >
-        Tell your friends
+        <Text tid="shareButton" />
       </a>
     </Button>
   </div>

@@ -1,0 +1,19 @@
+{
+  "appTitle": "Apoyá nuestro proyecto!",
+  "errorMessage": "Ha ocurrido un error:",
+  "modalMessage": "Agregá este sitio a tus favoritos!",
+  "modalTitle": "Guardar para después",
+  "modalCloseButton": "Cerrar",
+  "modalAddToFavButton": "Agregar a Favoritos",
+  "tooltipMessage": "faltante para el objetivo.",
+  "cardDescription-span-1": "Restan solo ",
+  "cardDescription-span-2": " días ",
+  "cardDescription-span-3": " para apoyar este proyecto.",
+  "cardDescription-span-4": "Únete a los otros ",
+  "cardDescription-span-5": " donantes que ya han apoyado este proyecto. Cada dolar cuenta.",
+  "emailPlaceholder": "Ingresa tu email",
+  "helpLink": "Por qué donar $50?",
+  "giveNowButton": "Donar",
+  "saveButton": "Guardar",
+  "shareButton": "Compartir"
+}

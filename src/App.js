@@ -1,13 +1,14 @@
 // Dependencies
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
 import { makeStyles } from '@material-ui/core/styles';
 import CircularProgress from '@material-ui/core/CircularProgress';
-
+import { LanguageContext } from './containers/Language/Language';
+import LanguageSelector from './components/LanguegeSelector/LanguageSelector';
 import CardContainer from './containers/Card/CardContainer';
 import Footer from './components/Footer/Footer';
 import Modal from './components/Modal/Modal';
-
+import Text from './components/Text/Text';
 import { config } from './config/index';
 
 // Styles
@@ -34,6 +35,8 @@ const useStyles = makeStyles((theme) => ({
  * @return {JSX}
  */
 const App = () => {
+  const { dictionary } = useContext(LanguageContext);
+
   /**
    * The loading state for when the app is loading requests.
    * @type {Boolean}
@@ -54,17 +57,6 @@ const App = () => {
    * @type {Array}
    */
   const [funds, setFunds] = useState([]);
-
-  /**
-   * The Title to show in the modal.
-   * @type {string}
-   */
-  const modalTitle = 'Save for Later';
-  /**
-   * The Message to show in the modal.
-   * @type {string}
-   */
-  const modalMessage = 'Add this site to the favourites!';
   /**
    * The flag to open the Modal.
    * @type {Boolean}
@@ -154,20 +146,20 @@ const App = () => {
    * Shows the error message when an error ocurs in the page load.
    */
   if (errorMessage) {
-    return <h2>Ha ocurrido un error: {errorMessage}</h2>;
+    return <h2><Text tid={errorMessage} /> {errorMessage}</h2>;
   }
 
   return (
     <div className={`app ${classes.root}`}>
-      <h1>Funds App</h1>
+      <h1><Text tid="appTitle" /></h1>
       <div className="app_content">
         {loading ? <CircularProgress />
           : (
             <>
               <Modal
-                message={modalMessage}
+                message={dictionary.modalMessage}
                 open={openModal}
-                title={modalTitle}
+                title={dictionary.modalTitle}
                 sharing
                 handleClose={handleClose}
               />
@@ -177,6 +169,7 @@ const App = () => {
                 getFunds={getFunds}
               />
               <Footer onSaveClick={handleSaveClick} />
+              <LanguageSelector />
             </>
           )}
       </div>

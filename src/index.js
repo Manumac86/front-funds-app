@@ -1,10 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
+import { LanguageProvider } from './containers/Language/Language';
 
 /**
  * Render the App Component in the root element.
  */
 ReactDOM.render(
-  <App />, document.getElementById('root'),
+  <LanguageProvider>
+    <App />
+  </LanguageProvider>,
+  document.getElementById('root'),
 );

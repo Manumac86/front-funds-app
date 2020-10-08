@@ -5,6 +5,7 @@ import Box from '@material-ui/core/Box';
 import Tooltip from '@material-ui/core/Tooltip';
 import Fade from '@material-ui/core/Fade';
 import LinearProgressBar from '../LinearProgressBar/LinearProgressBar';
+import Text from '../Text/Text';
 
 // Styles
 import './Card.scss';
@@ -59,7 +60,7 @@ const Card = ({
         classes={{ tooltip: classes.customWidth }}
         placement="top"
         title={(
-          <><b>${amountLeft}</b> still needed for this project.</>
+          <><b>${amountLeft}</b> <Text tid="tooltipMessage" /></>
         )}
         TransitionComponent={Fade}
         TransitionProps={{ timeout: 600 }}
@@ -78,11 +79,17 @@ const Card = ({
       </Tooltip>
       <div className="card_items">
         <p className="card_items_description">
-          <span>Only {fundingTimeLeft} days </span>left to fund this project.
+          <span>
+            <Text tid="cardDescription-span-1" />
+            {fundingTimeLeft}
+            <Text tid="cardDescription-span-2" />
+          </span>
+          <Text tid="cardDescription-span-3" />
         </p>
         <p className="card_items_description">
-          Join the <strong>{numberOfFunds} </strong>
-          other donors who have already supported this project. Every dollar helps.
+          <Text tid="cardDescription-span-4" />
+          <strong>{numberOfFunds}</strong>
+          <Text tid="cardDescription-span-5" />
         </p>
         {children}
       </div>

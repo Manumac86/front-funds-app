@@ -1,0 +1,19 @@
+{
+  "appTitle": "Fund our project!",
+  "errorMessage": "An error has occured",
+  "modalMessage": "Add this site to your favorites!",
+  "modalTitle": "Save for Later",
+  "modalCloseButton": "Close",
+  "modalAddToFavButton": "Add to Favorites",
+  "tooltipMessage": "still needed for this project.",
+  "cardDescription-span-1": "Only ",
+  "cardDescription-span-2": " days ",
+  "cardDescription-span-3": " left to fund this project.",
+  "cardDescription-span-4": "Join the ",
+  "cardDescription-span-5": " other donors who have already supported this project. Every dollar helps.",
+  "emailPlaceholder": "Enter your email",
+  "helpLink": "Why give $50?",
+  "giveNowButton": "Give now",
+  "saveButton": "Save for later",
+  "shareButton": "Tell your friends"
+}

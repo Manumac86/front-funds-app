@@ -1,0 +1,19 @@
+{
+  "appTitle": "Finanzia il nostro progetto!",
+  "errorMessage": "C'è stato un errore",
+  "modalMessage": "Aggiungi questo sito ai tuoi preferiti!",
+  "modalTitle": "Salva per dopo",
+  "modalCloseButton": "Chiudere",
+  "modalAddToFavButton": "Aggiungi ai preferiti",
+  "tooltipMessage": "ancora necessari per questo progetto.",
+  "cardDescription-span-1": "Solo ",
+  "cardDescription-span-2": " giorni ",
+  "cardDescription-span-3": " rimasto per finanziare questo progetto.",
+  "cardDescription-span-4": "Unisciti agli altri ",
+  "cardDescription-span-5": " donatori che hanno già sostenuto questo progetto. Ogni dollaro aiuta.",
+  "emailPlaceholder": "Inserisci il tuo indirizzo email",
+  "helpLink": "Perché dare $50?",
+  "giveNowButton": "Donare",
+  "saveButton": "Salva per dopo",
+  "shareButton": "Dillo ai tuoi amici"
+}
