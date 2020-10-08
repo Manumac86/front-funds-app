@@ -21,6 +21,7 @@ import './App.scss';
  */
 const useStyles = makeStyles((theme) => ({
   root: {
+    color: 'whitesmoke',
     display: 'flex',
     '& > * + *': {
       marginLeft: theme.spacing(0),
