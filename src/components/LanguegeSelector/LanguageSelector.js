@@ -6,12 +6,29 @@ import { LanguageContext } from '../../containers/Language/Language';
 // Styles
 import './LanguageSelector.scss';
 
+/**
+ * The Language Selector Component
+ *
+ * @export LanguageSelector
+ * @return {JSX}
+ */
 export default function LanguageSelector() {
+  /**
+   * The Language context to change the language.
+   * @type {Object}
+   */
   const { userLanguage, userLanguageChange } = useContext(LanguageContext);
 
-  // set selected language by calling context method
+  /**
+   * Set selected language by calling context method.
+   *
+   * @param {event} event  The select language event.
+   */
   const handleLanguageChange = (event) => userLanguageChange(event.target.value);
 
+  /**
+   * Set the default language from localStorage. If no data, use the user browser language.
+   */
   useEffect(() => {
     let defaultLanguage = window.localStorage.getItem('rcml-lang');
     if (!defaultLanguage) {

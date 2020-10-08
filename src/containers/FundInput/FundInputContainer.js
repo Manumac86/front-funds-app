@@ -19,6 +19,10 @@ const FundInputContainer = ({
   token,
   getFunds,
 }) => {
+  /**
+   * The Language dictionary to use translations from LanguageContext.
+   * @type {Object}
+   */
   const { dictionary } = useContext(LanguageContext);
   /**
    * The newFund state for when a new fund is made.

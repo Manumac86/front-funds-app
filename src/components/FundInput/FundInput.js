@@ -24,6 +24,10 @@ const FundInput = ({
   onChangeEmail,
   onSubmit,
 }) => {
+  /**
+   * The Language dictionary to use translations from LanguageContext.
+   * @type {Object}
+   */
   const { dictionary } = useContext(LanguageContext);
 
   return (

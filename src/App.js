@@ -26,6 +26,7 @@ const useStyles = makeStyles((theme) => ({
     '& > * + *': {
       marginLeft: theme.spacing(0),
     },
+    'font-family': 'Quicksand',
   },
 }));
 
@@ -36,6 +37,10 @@ const useStyles = makeStyles((theme) => ({
  * @return {JSX}
  */
 const App = () => {
+  /**
+   * The Language dictionary to use translations from LanguageContext.
+   * @type {Object}
+   */
   const { dictionary } = useContext(LanguageContext);
 
   /**
