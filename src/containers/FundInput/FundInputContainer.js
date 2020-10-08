@@ -91,6 +91,7 @@ const FundInputContainer = ({
         .catch((error) => {
           setModalTitle(`${dictionary.errorMessage} ${error}`);
           setModalMessage(`${dictionary.errorModalMessage}`);
+          setLoading(false);
           setOpenModal(true);
         });
     }
