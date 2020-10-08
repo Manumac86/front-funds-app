@@ -15,5 +15,8 @@
   "helpLink": "Por qué donar $50?",
   "giveNowButton": "Donar",
   "saveButton": "Guardar",
-  "shareButton": "Compartir"
+  "shareButton": "Compartir",
+  "successModalMessage": "Gracias por tu apoyo! Tu ayuda acelerará nuestro proyecto y nos ayudará a conseguir nuestro objetivo! Aquí está el ID de tu donación: ",
+  "successModalTitle": "Gracias por tu donación!",
+  "errorModalMessage": "Lo lamentamos, se produjo un error al intentar guardar tu donación. Por favor, intentalo de nuevo!"
 }

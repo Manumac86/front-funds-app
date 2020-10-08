@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import PropTypes from 'prop-types';
 import axios from 'axios';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import FundInput from '../../components/FundInput/FundInput';
 import Modal from '../../components/Modal/Modal';
+import { LanguageContext } from '../Language/Language';
 import { config } from '../../config/index';
 
 /**
@@ -18,6 +19,7 @@ const FundInputContainer = ({
   token,
   getFunds,
 }) => {
+  const { dictionary } = useContext(LanguageContext);
   /**
    * The newFund state for when a new fund is made.
    * @type {Number}
@@ -83,9 +85,8 @@ const FundInputContainer = ({
           getFunds(token);
         })
         .catch((error) => {
-          setModalTitle(`Error ocurred ${error}`);
-          setModalMessage(`Sorry, something went wrong while triyng to add your fund.
-          Please try again!`);
+          setModalTitle(`${dictionary.errorMessage} ${error}`);
+          setModalMessage(`${dictionary.errorModalMessage}`);
           setOpenModal(true);
         });
     }
@@ -95,10 +96,8 @@ const FundInputContainer = ({
    * Set the Modal Title, Message and loading when the added fund ID is received.
    */
   useEffect(() => {
-    setModalTitle('Thanks for your help!');
-    setModalMessage(`We thanks you for your help!
-    This fund will accellerate our project and help us to achieve the goal!.
-    This is your fund ID: ${id}`);
+    setModalTitle(`${dictionary.successModalTitle}`);
+    setModalMessage(`${dictionary.successModalMessage} ${id}`);
     setLoading(false);
   }, [id]);
 

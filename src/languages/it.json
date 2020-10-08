@@ -15,5 +15,8 @@
   "helpLink": "Perché dare $50?",
   "giveNowButton": "Donare",
   "saveButton": "Salva per dopo",
-  "shareButton": "Dillo ai tuoi amici"
+  "shareButton": "Dillo ai tuoi amici",
+  "successModalMessage": "Ti ringraziamo per il tuo aiuto! Il tuo fondo accelererà il tuo progetto e ci aiuterà a raggiungere l'obiettivo !. Questo è l'ID del tuo fondo: ",
+  "successModalTitle": "Grazie per la tua donazione!",
+  "errorModalMessage": "Spiacenti, si è verificato un problema durante il tentativo di aggiungere la tua fine. Per favore riprova!"
 }

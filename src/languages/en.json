@@ -15,5 +15,8 @@
   "helpLink": "Why give $50?",
   "giveNowButton": "Give now",
   "saveButton": "Save for later",
-  "shareButton": "Tell your friends"
+  "shareButton": "Tell your friends",
+  "successModalMessage": "We thanks you for your help! Your fund will accellerate our project and help us to achieve the goal!. This is your fund ID: ",
+  "successModalTitle": "Thanks for your support!",
+  "errorModalMessage": "Sorry, something went wrong while triyng to add your fund. Please try again!"
 }
