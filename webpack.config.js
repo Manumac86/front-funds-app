@@ -1,14 +1,13 @@
 const path = require('path');
 const Dotenv = require('dotenv-webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   entry: {
     app: './src/index.js',
   },
-  devtool: 'inline-source-map',
-  mode: 'development',
   module: {
     rules: [
       {
@@ -27,14 +26,13 @@ module.exports = {
         use: ['style-loader', 'css-loader'],
       },
       {
-        test: /\.s[ac]ss$/i,
+        test: /\.scss$/i,
         use: [
-          // Creates `style` nodes from JS strings
-          'style-loader',
+          {
+            loader: MiniCssExtractPlugin.loader,
+          },
           // Translates CSS into CommonJS
           'css-loader',
-          // Solve Problems with url(...)
-          'resolve-url-loader',
           // Compiles Sass to CSS
           'sass-loader',
         ],
@@ -46,7 +44,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js',
+    filename: '[name].[hash].js',
   },
   devServer: {
     contentBase: './dist',
@@ -55,6 +53,10 @@ module.exports = {
     historyApiFallback: true,
   },
   plugins: [
+    new MiniCssExtractPlugin({
+      filename: '[name].[hash].css',
+      chunkFilename: '[id].[hash].css',
+    }),
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: './public/index.html',
