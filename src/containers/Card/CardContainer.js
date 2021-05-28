@@ -53,7 +53,7 @@ const CardContainer = ({
    *
    * @type {Date}
    */
-  const fundsLimitTime = new Date('10/30/2020');
+  const fundsLimitTime = new Date('12/31/2022');
   /**
    * The total days left to fund the project.
    *
